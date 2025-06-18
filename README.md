@@ -33,15 +33,11 @@ This was one of my first few Python projects. I learned to use:
 
 Here are a few ideas I plan to explore as I learn more:
 
-- [ ] 📉 **Limit number of attempts**  
-      – Add a "Game Over" message if the guess count is too high 
-- [ ] 🎮 **Difficulty levels** (easy, medium, hard)  
-      – For harder modes, hints might be removed and attempts might be limited  
+- [ ] 📉 **Limit number of attempts**  – Add a "Game Over" message if the guess count is too high 
+- [ ] 🎮 **Difficulty levels**  (easy, medium, hard) – For harder modes, hints might be removed and attempts might be limited  
 - [ ] 🎨 **Improve UX messages** (make them funnier/more interactive)  
-- [ ] 🔁 **Replay with new range**  
-      – Ask user to choose custom min and max values  
-- [ ] 🪟 **GUI version**
-      – Make it visual instead of terminal-based
+- [ ] 🔁 **Replay with new range**  – Ask user to choose custom min and max values  
+- [ ] 🪟 **GUI version**  – Make it visual instead of terminal-based
 
 ---
 
