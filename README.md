@@ -41,7 +41,7 @@ Here are a few ideas I plan to explore as I learn more:
 - [ ] 🔁 **Replay with new range**  
       – Ask user to choose custom min and max values  
 - [ ] 🪟 **GUI version**
-      – Make it visual instead of terminal-based
+      – Make it visual instead of terminal-based
 
 ---
 
