@@ -7,25 +7,37 @@ print("I'm thinking of a number between 1 and 100.")
 tries = []
 
 while True:
-    guess = int(input("Take a guess: "))
+    guess = (input("Take a guess: "))
 
-    tries.append(guess)
-    if guess in tries[:-1]:
-        print("You already guessed that number. Try again.")
+    if guess.strip().lower() in ["exit", "quit", "stop", "n", "no"]:
+        print("Quitting the game.")
+        break
+
+    try:
+        guess = int(guess)
+    except ValueError:
+        print("Invalid input. Please enter a number.")
         continue
+
     if guess < 1 or guess > 100:
         print("Please enter a number between 1 and 100.")
         continue
 
-    if guess - x < -10:
+    if guess in tries:
+        print("You already guessed that number. Try again.")
+        continue
+
+    tries.append(guess)
+
+    if guess - x <= -10:
         print("Your guess is too low.")
-    elif guess - x > 10:
+    elif guess - x >= 10:
         print("Your guess is too high.")
-    elif 0 > guess - x > -10:
+    elif -10 < guess - x <= -5:
         print("Close! But still too low.")
-    elif 0 < guess - x < 10:
+    elif 5 <= guess - x < 10:
         print("Close! But still too high.")
-    elif 0 > guess - x > -5:
+    elif -5 < guess - x < 0:
         print("Almost got it! Just a little too low.")
     elif 0 < guess - x < 5:
         print("Almost got it! Just a little too high.")
@@ -37,6 +49,9 @@ while True:
 
         cont = input('''Do you want to continue? 
 (Press enter to continue or type 'N' to stop): ''')
-        if cont.lower() in ["n", "no", "stop"]:
+        if cont.strip().lower() in ["n", "no", "stop"]:
             print("Thanks for playing!")
             break
+        else:
+            x = random.randint(1, 100)
+            print("I'm thinking of a new number between 1 and 100.")
